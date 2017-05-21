@@ -7,7 +7,6 @@ app.get( "*", function(req, res) {
 	var h = req.headers,
 		userAgent = h["user-agent"].match(/\(([^\)]*)\)/)[0],
 		language = h["accept-language"];
-	console.log(req.headers);
 
     res.json({
 		software: userAgent.substr(1,userAgent.length-2),
